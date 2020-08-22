@@ -1,1 +1,15 @@
-<div class="container"></div>
+<div class="container">
+  <h1>Quotes</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let Quote of quotes; let i=index'>
+       <h6> <p>published by</p>{{Quote.name}}</h6>
+          <div>
+            <p>like  {{Quote.upvote}}   Dislike  {{Quote.downvote}}</p>
+          </div>
+          <p>{{Quote.quote}}</p>
+          <span><h6>Author</h6><p>{{Quote.author}}</p></span>
+      </div>
+    </div>
+  </div>
+</div>
