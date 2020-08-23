@@ -1,20 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { DropdownModule } from 'angular-bootstrap-md';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { from } from 'rxjs';
+import { DateCounterPipe } from './date-counter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuoteFormComponent
+    QuoteFormComponent,
+    DateCounterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // DropdownModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

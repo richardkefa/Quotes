@@ -1,14 +1,28 @@
-<div class="container">
+<div class="container-fluid">
   <h1>Quotes</h1>
   <div class="row">
     <div class="col-md-6">
-      <div *ngFor='let Quote of quotes; let i=index'>
-       <h6> <p>published by</p>{{Quote.name}}</h6>
-          <div>
-            <p>like  {{Quote.upvote}}   Dislike  {{Quote.downvote}}</p>
+      <app-quote-form (addquote)="addNewQuote($event)"></app-quote-form>
+    </div>
+    <div class="col-md-6">
+      <div class="card card-cascade wider"  *ngFor='let Quote of quotes; let i=index'>
+      
+        <!-- Card content -->
+        <div class="card-body card-body-cascade text-center pb-0">
+          <!-- Title -->
+          <h6 class="card-title text-left" >published by  {{Quote.name}} {{Quote.entryDate|dateCounter}}</h6>
+          <div class="card-text"> <p>{{Quote.quote}}</p>
+          <span>Author {{Quote.author}}</span></div>
+      
+          <!-- Card footer -->
+          <div class="card-footer text-muted text-center mt-4">
+            <div>
+              <p>like  {{Quote.upvote}}   Dislike  {{Quote.downvote}}</p>
+            </div>
           </div>
-          <p>{{Quote.quote}}</p>
-          <span><h6>Author</h6><p>{{Quote.author}}</p></span>
+      
+        </div>
+
       </div>
     </div>
   </div>

@@ -12,4 +12,10 @@ export class AppComponent {
     new Quotes(1, 'richard', 'esteen', 'insernity is doing the same thing and expecting different results',new Date(),0,0),
     new Quotes(1, 'richard', 'esteen', 'insernity is doing the same thing and expecting different results',new Date(),0,0)
   ]
+  addNewQuote(Quote){
+    let quoteLength= this.quotes.length;
+    Quote.id=quoteLength+1;
+    Quote.entryDate=new Date();
+    this.quotes.push(Quote);
+  }
 }
