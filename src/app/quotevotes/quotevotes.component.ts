@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
 
 @Component({
@@ -9,6 +9,14 @@ import { Quotes } from '../quotes';
 export class QuotevotesComponent implements OnInit {
 
   @Input() quotes:Quotes;
+  @Output() upvote= new EventEmitter<boolean>();
+  upVote(upVote:boolean){
+    this.upvote.emit(upVote);
+  };
+  @Output() downvote= new EventEmitter<boolean>();
+  downVote(downVote:boolean){
+    this.downvote.emit(downVote);
+  }
   constructor() { }
 
   ngOnInit(): void {

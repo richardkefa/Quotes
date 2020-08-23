@@ -1,10 +1,10 @@
 <div class="container-fluid">
-  <h1>Quotes</h1>
+  <h1 class="animated rollIn 4s slow">Quotes</h1>
   <div class="row">
     <div class="col-md-6">
       <app-quote-form (addquote)="addNewQuote($event)"></app-quote-form>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6" style="overflow: scroll;">
       <div class="card card-cascade wider"  *ngFor='let Quote of quotes; let i=index'>
       
         <!-- Card content -->
@@ -17,7 +17,7 @@
           <!-- Card footer -->
           <div class="card-footer text-muted text-center mt-4">
             <div class="text-right">
-             <app-quotevotes></app-quotevotes>
+             <app-quotevotes [quotes]='Quote'(upvote)='upVote($event,i)' (downvote)='downVote($event,i)'></app-quotevotes>
             </div>
           </div>
       
