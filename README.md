@@ -5,7 +5,8 @@
 
 ## Description 
 Ths is the Quotes application that was built to get people inspired.
-It has  inspiration quotes which can be reacted apon.The user can also add more quetes.All info
+It has  inspiration quotes which can be reacted apon.The user can also add more quetes.
+https://richardkefa.github.io/Quotes/
 
 ## User instructions 
 * Open the web page.

@@ -8,9 +8,9 @@ import { Quotes } from './quotes'
 })
 export class AppComponent {
   quotes: Quotes[] = [
-    new Quotes(1, 'richard', 'esteen', 'insernity is doing the same thing and expecting different results',new Date(),0,0),
-    new Quotes(2, 'richard', 'esteen', 'insernity is doing the same thing and expecting different results',new Date(),0,0),
-    new Quotes(3, 'richard', 'esteen', 'insernity is doing the same thing and expecting different results',new Date(),0,0)
+    new Quotes(1, 'richard', 'Albert Eisteen', 'insernity is doing the same thing and expecting different results',new Date(2020,5,10),0,0),
+    new Quotes(2, 'kefa', 'Nelson Mandela', 'Education is the most powerful weapon which you can use to change the world.',new Date(2018,1,4),0,0),
+    new Quotes(3, 'mcharo', 'Shakespeare', 'Hell is empty and all the devils are here.',new Date(2019,11,12),0,0)
   ]
   addNewQuote(Quote){
     let quoteLength= this.quotes.length;
@@ -25,7 +25,5 @@ export class AppComponent {
   downVote(value,index){
     this.quotes[index].downvote++;
   }
-  // sortedQuotes(): Quotes[]{
-  //   return this.quotes.sort((a: Quotes, b: Quotes) => b.upvote-a.upvote)
-  // }
+
 }
