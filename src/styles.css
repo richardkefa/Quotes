@@ -1,10 +1,11 @@
 .card {
   margin-bottom: 30px;
   margin-top: 10px;
+  background-color:whitesmoke;
 }
 
-form {
-  position: sticky;
+input {
+color: whitesmoke;
 }
 
 @media only screen and(max-width: 420px){
@@ -19,5 +20,5 @@ form {
   background-repeat: no-repeat;
   background-position-x: center;
   background-attachment: fixed;
-  box-shadow: rgba(15, 139, 133, 0.664) 0 3000px inset;
+  box-shadow: rgba(42, 43, 43, 0.664) 0 3000px inset;
 }

@@ -16,7 +16,8 @@ export class AppComponent {
     let quoteLength= this.quotes.length;
     Quote.id=quoteLength+1;
     Quote.entryDate=new Date();
-    this.quotes.push(Quote);
+    let quoteObj= new Quotes(Quote.id,Quote.name,Quote.author,Quote.quote,Quote.entryDate,0,0);
+    this.quotes.push(quoteObj);
   }
   upVote(value,index){
     this.quotes[index].upvote++;
@@ -24,4 +25,7 @@ export class AppComponent {
   downVote(value,index){
     this.quotes[index].downvote++;
   }
+  // sortedQuotes(): Quotes[]{
+  //   return this.quotes.sort((a: Quotes, b: Quotes) => b.upvote-a.upvote)
+  // }
 }

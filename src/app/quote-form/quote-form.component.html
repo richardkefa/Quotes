@@ -1,9 +1,10 @@
 <div class="container">
-  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+  <form (ngSubmit)='submitQuote(quoteForm)' #quoteForm='ngForm'>
+    <h1 class=" blue-text text-center">Inspire</h1>
     <div class="md-form input-with-pre-icon">
       <i class="fas fa-user input-prefix"></i>
       <input type="text" id="publishername" class="form-control" name="publishername" [(ngModel)]="newQuote.name" #name='ngModel' required>
-      <label for="prefixInside">Enter your name </label>
+      <label for="prefixInside" class="light-blue-text">Enter your name </label>
       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
         <p>Name is required</p>
       </div>
@@ -11,7 +12,7 @@
     <div class="md-form input-with-pre-icon">
       <i class="fas fa-user input-prefix"></i>
       <input type="text" id="authorname" class="form-control" name="authorname" [(ngModel)]="newQuote.author" #author='ngModel' required>
-      <label for="prefixInside">Enter authors name </label>
+      <label for="prefixInside" class="light-blue-text">Enter authors name </label>
       <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
         <p>Author name is required</p>
       </div>
@@ -19,7 +20,7 @@
           <!--Material textarea-->
   <div class="md-form amber-textarea active-amber-textarea">
     <textarea id="quote" class="md-textarea form-control" rows="3" name="quote" [(ngModel)]="newQuote.quote" #quote='ngModel'required></textarea>
-    <label for="quote">Enter Quote</label>
+    <label for="quote" class="light-blue-text">Enter Quote</label>
     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
       <p>Quote is required</p>
     </div>
