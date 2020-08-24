@@ -1,10 +1,11 @@
 <div class="container-fluid">
+  <h1 class="text-center blue-text animated bounce infinite slower">Quotes</h1>
   <div class="row">
     <div class="col-md-6">
       <app-quote-form (addquote)="addNewQuote($event)"></app-quote-form>
     </div>
     <div class="col-md-6">
-      <h1 class="blue-text text-center">Get innspired</h1>
+      <h1 class="blue-text text-center animated bounce">Get innspired</h1>
       <div class="card card-cascade wider"  *ngFor='let Quote of quotes; let i=index;'>
       
         <!-- Card content -->
@@ -13,7 +14,6 @@
           <h6 class="card-title text-left blue-text" >published by  {{Quote.name}} {{Quote.entryDate|dateCounter}}</h6>
           <div class="card-text black-text">
              <p>{{Quote.quote}}</p>
-          <span>Author {{Quote.author}}</span></div>
       
           <!-- Card footer -->
           <div class="card-footer text-muted text-center mt-4 ">
