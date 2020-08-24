@@ -18,5 +18,10 @@ export class AppComponent {
     Quote.entryDate=new Date();
     this.quotes.push(Quote);
   }
- 
+  upVote(value,index){
+    this.quotes[index].upvote++;
+  }
+  downVote(value,index){
+    this.quotes[index].downvote++;
+  }
 }
